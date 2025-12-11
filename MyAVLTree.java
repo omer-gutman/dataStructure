@@ -9,7 +9,22 @@ public class MyAVLTree<T> {
      * Implement the following method.
      */
     public int depthOfMax() {
-    	throw new UnsupportedOperationException("Delete this line and replace it with your implementation");
+        // אם העץ ריק החזר 1
+        if (this.root == null) {
+            return -1;
+        }
+
+        int depth = 0;
+        TreeNode<T> current = this.root;
+
+        // האיבר המקסימלי נמצא הכי ימינה
+        // נירד ימינה עד שנגיע לצומת שאין לו ילד ימני
+        while (current.getRight() != null) {
+            current = current.getRight();
+            depth = depth + 1;
+        }
+        
+        return depth;
     }
     
     

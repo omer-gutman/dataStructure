@@ -16,7 +16,19 @@ public class MyArray<T> {
      * Implement the following method.
      */
     public void reverse() {
-    	throw new UnsupportedOperationException("Delete this line and replace it with your implementation");
+        for (int i = 0; i < this.size / 2; i = i + 1) {
+            // קבלת הrefrence לשני האיברים שאנו רוצים להחליף, i והמראה שלו
+            ArrayElement<T> left = this.array[i];
+            ArrayElement<T> right = this.array[this.size - 1 - i];
+
+            // ביצוע ההחלפה במערך עצמו
+            this.array[i] = right;
+            this.array[this.size - 1 - i] = left;
+
+            //  עדכון שדה האינדקס
+            this.array[i].setIndex(i);
+            this.array[this.size - 1 - i].setIndex(this.size - 1 - i);
+        }
     }
 
     /***

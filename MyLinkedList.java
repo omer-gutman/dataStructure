@@ -11,8 +11,26 @@ public class MyLinkedList<T> {
      * Implement the following method.
      */
     public void reverse() {
-    	throw new UnsupportedOperationException("Delete this line and replace it with your implementation");
-    }
+        Link<T> current = this.head;
+        Link<T> temp = null;
+
+        //  מעבר על כל צומת ברשימה והחלפה בין המצביעים next ו-prev
+        while (current != null) {
+            temp = current.getPrev();
+            current.setPrev(current.getNext());
+            current.setNext(temp);
+            
+            // התקדמות לצומת הבא שנמצא כעת ב-getPrev
+            current = current.getPrev();
+        }
+
+        // החלפה בין head ו-tail של הרשימה כולה
+        if (this.head != null) {
+            Link<T> swapTemp = this.head;
+            this.head = this.tail;
+            this.tail = swapTemp;
+        }
+}
     
     /***
      * Assumes valid input (not null).
