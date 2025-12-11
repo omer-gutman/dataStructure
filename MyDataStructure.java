@@ -69,11 +69,11 @@ public class MyDataStructure {
             this.sumQuality -= q;
             this.totalSize--;
         } else {
-            // לא מצאנו, נסה לחפש בעץ ה-0
+            // לא מצאנו, נסה לחפש בעץ ה0
             TreeNode<Link<Product>> nodeZero = this.treeZero.search(id);
             
             if (nodeZero != null) {
-                // מצאנו בעץ ה-0. 
+                // מצאנו בעץ ה0 
                 // השדה satelliteData מחזיק את הלינק המתאים ברשימה
                 Link<Product> linkToDelete = nodeZero.satelliteData();
                 
