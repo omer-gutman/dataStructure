@@ -11,7 +11,7 @@ public final class IntegrityStatement {
          *  work contains code/answers that is not my own".
          */
     	
-        String sign = ""; // <- Fill in your name and ID here! For example: "Israel Israeli (123456789)"
+        String sign = "214289209"; // <- Fill in your name and ID here! For example: "Israel Israeli (123456789)"
         if (sign.length() == 0) {
             throw new UnsupportedOperationException("You didn't sign the integrity statement!");
         }
@@ -22,7 +22,7 @@ public final class IntegrityStatement {
          *  Large Language Models (LLMs) including ChatGPT, forums, websites, books, etc.
          *  state those here:
          *
-         *  < FILL IN YOUR SOURCES >
+         * i used the help of google gemini as a reference for java syntax and debugging. it helped me bridge the gap from my python background (my intro to cs was in python). the algorithms and implementation are my own work."
          */
     }
 }
